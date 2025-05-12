@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>*</pattern>
+        <template>Please type 'Hello' to continue.</template>
+    </category>
+    
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+                <li>Hey! I am Makar. Can I have your name please? Enter: My name is *</li>
+                <li>Hello there! I am Makar. May I have your name please? Enter: My name is *</li>
+                <li>Hello! This is Makar. Can you type your name in? Enter: My name is *</li>
+            </random>
+        </template>
+    </category>
+  
+    <category>
+         <pattern>MY NAME IS *</pattern>
+         <template>Nice to meet you, <set name = "name"><star /></set>! Are you a Computer Science Student?</template>
+    </category>
+  
+    <category>
+        <pattern>NO</pattern>
+        <template>I am sorry, I am not the right counselor for you. I'll refer you to someone else.</template>
+    </category>
+  
+   <category>
+        <pattern>YES</pattern>
+        <template>Are you interested about a lot of subjects at the same time?
+            <button>
+                <text>Yes</text>
+                <postback>SoftwareEngineer</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>ifHardwareEngineer</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ifHardwareEngineer</pattern>
+        <template>Do you love working with machinery especially computer parts?
+            <button>
+                <text>Yes</text>
+                <postback>HardwareEngineer</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>ifProductManager</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ifProductManager</pattern>
+        <template>Are you a people person? Do you easily make conversations with people?
+            <button>
+                <text>Yes</text>
+                <postback>ProductManager</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>ifDataEngineer</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ifDataEngineer</pattern>
+        <template>Do you enjoy analyzing data and are interested in math?
+            <button>
+                <text>Yes</text>
+                <postback>DataEngineer</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>ifTechnicalManager</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ifTechnicalManager</pattern>
+        <template>Do you excel as a leader in teams and in coordinating people?
+            <button>
+                <text>Yes</text>
+                <postback>TechnicalManager</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>ifNone</postback>
+            </button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ifNone</pattern>
+        <template>I would recommend you to take some elective classes and join school clubs to know more about your interests!</template>
+    </category>
+    
+
+	<category>
+        <pattern>SoftwareEngineer</pattern>
+        <template>A career as a software engineer could suit you well! Click on the button to learn more!
+            <button>
+                <text>Learn more!</text>
+                <url>https://www.wgu.edu/career-guide/information-technology/software-engineer-career.html</url>
+            </button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ProductManager</pattern>
+        <template>A career as a product manager could suit you well! Click on the button to learn more!
+            <button>
+                <text>Learn more!</text>
+                <url>https://www.wgu.edu/career-guide/business/product-designer-career.html</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DataEngineer</pattern>
+        <template>A career as a data engineer/scientist could suit you well! Click on the button to learn more!
+            <button>
+                <text>Learn more!</text>
+                <url>https://www.wgu.edu/career-guide/information-technology/data-engineer-career.html</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TechnicalManager</pattern>
+        <template>A career as a technical engineer could suit you well! Click on the button to learn more!
+            <button>
+                <text>Learn more!</text>
+                <url>https://www.wgu.edu/career-guide/information-technology/it-manager-career.html</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HardwareEngineer</pattern>
+        <template>A career as a hardware engineer could suit you well! Click on the button to learn more!
+            <button>
+                <text>Learn more!</text>
+                <url>https://www.wgu.edu/career-guide/information-technology/hardware-engineer-career.html</url>
+            </button>
+        </template>
+    </category>
+    
+</aiml>
